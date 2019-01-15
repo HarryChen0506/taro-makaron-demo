@@ -1,0 +1,61 @@
+.page-dynamic {
+  position:relative;   
+  width:100%;
+  height:100%;
+  padding-top:130rpx;
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;  
+  .pic-section {
+    position:relative;    
+    width:690rpx;
+    .raw {
+      position: absolute;  
+      left: 0;
+      top: 0;    
+      width:690rpx;
+      height:920rpx;   
+      &.hidden {
+        opacity: 0;
+      }   
+    }
+    .crop {
+      position:relative;      
+      width:690rpx;
+      height:920rpx;
+      background: #ccc;  
+      overflow: hidden;
+      &.hidden {
+        opacity: 0;
+      }
+      .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .raw-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }    
+    }
+  }
+  .button-section {
+    margin-top: 20rpx
+  }
+  .canvas-wrap {
+    position:fixed;
+    left:0;
+    bottom:-3050px;
+    z-index:-2;
+    opacity:0;
+    visibility:none;
+  }
+}
+  

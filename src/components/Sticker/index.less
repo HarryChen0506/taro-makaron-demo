@@ -1,0 +1,41 @@
+.sticker-wrap {
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1;
+  // transition:opacity 0.1s;
+  &.hidden {
+    opacity: 0;
+  }
+  &.event-through {
+    pointer-events: none;//使用当前属性点击div将触发链接
+  }
+  .border {
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:-1;
+    width:100%;
+    height:100%;
+    border:1px solid transparent;
+    &.active {
+      border:1px solid #fff;
+    }
+  }
+  .control {    
+    width:50rpx;
+    height:50rpx;
+    position:absolute;
+    right:-25rpx;
+    bottom:-25rpx;
+    background:#fff;
+    border-radius:25rpx;    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    &.active {
+      opacity:1;
+    }
+  }  
+}
