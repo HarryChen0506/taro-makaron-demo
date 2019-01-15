@@ -416,7 +416,7 @@ class Dynamic extends Component {
   // 更换场景
   handleChooseScene = (scene) => {
     const {currentScene} = this.state
-    if (currentScene.sceneId === scene.sceneId) {
+    if (!scene.sceneId || currentScene.sceneId === scene.sceneId ) {
       return
     }
     this.setState({
@@ -635,7 +635,7 @@ class Dynamic extends Component {
     const {currentScene, sceneList, foreground, frame} = this.state
     const {originWidth, originHeight} = foreground    
     const sceneInfo = this.getSceneInfoById(currentScene.sceneId, this.themeData.sceneList, 'sceneId')
-
+    // console.log('calcForegroundSize', this.themeData.sceneList, currentScene.sceneId, sceneInfo)
     const imageRatio = originWidth / originHeight
     const params = JSON.parse(sceneInfo.sceneConfig)
     const autoScale = parseFloat(params.size.default)

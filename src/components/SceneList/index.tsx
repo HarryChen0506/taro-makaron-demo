@@ -33,7 +33,7 @@ class SceneList extends Component {
   }
 
   handleClick = (item) => {
-    const { onClick} = this.props
+    const { onClick } = this.props
     typeof onClick === 'function' && onClick(item)
   }
 
